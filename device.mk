@@ -114,6 +114,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml:system/etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # DPM
 PRODUCT_BOOT_JARS += \
     com.qti.dpmframework \
