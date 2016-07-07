@@ -319,7 +319,7 @@
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
     <bool name="config_dynamic_bind_ims">true</bool>
 
-     <!-- Boolean indicating if current platform supports HFP inband ringing -->
+    <!-- Boolean indicating if current platform supports HFP inband ringing -->
      <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
      <!-- Whether device supports double tap to wake -->
@@ -357,4 +357,17 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareKeys">65</integer>
+
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm64/boot-framework.oat"</item>
+        <item>"/system/framework/oat/arm64/services.odex"</item>
+        <item>"/system/framework/arm64/boot.oat"</item>
+        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
+        <item>"/data/dalvik-cache/arm64/system@framework@boot.oat"</item>
+        <item>"/data/dalvik-cache/arm64/system@framework@services.jar@classes.dex"</item>
+    </string-array>
+
+    <!-- Should the pinner service pin the Camera application? -->
+    <bool name="config_pinnerCameraApp">true</bool>
 </resources>
