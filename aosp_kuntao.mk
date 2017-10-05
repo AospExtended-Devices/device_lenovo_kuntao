@@ -1,4 +1,5 @@
 # Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2016 The AospExtended Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,12 +16,11 @@
 # Inherit device configuration
 $(call inherit-product, device/lenovo/kuntao/full_kuntao.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common aosp stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
-# Boot animation
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 1920
+# Boot animation res
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Override build properties.
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -29,7 +29,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := kuntao
-PRODUCT_NAME := lineage_kuntao
+PRODUCT_NAME := aosp_kuntao
 PRODUCT_BRAND := Lenovo
 PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_RELEASE_NAME := kuntao
