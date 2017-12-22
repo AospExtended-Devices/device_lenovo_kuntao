@@ -100,6 +100,14 @@ BOARD_HARDWARE_CLASS += \
 # CNE | DPM
 BOARD_USES_QCNE := true
 
+# Dex
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT ?= true
+  endif
+endif
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := device/lenovo/kuntao/config.fs
 
@@ -116,7 +124,6 @@ TARGET_NO_RPC := true
 # GPU
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
-
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 TARGET_USES_GRALLOC1 := true
