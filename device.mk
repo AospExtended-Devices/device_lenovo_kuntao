@@ -109,8 +109,10 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libgenlock \
     memtrack.msm8953 \
-    libqdMetaData \
-    libqdMetaData.system
+    libqdMetaData.system \
+    libtinyxml \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.0_vendor
 
 # Display Calibration
 PRODUCT_PACKAGES += \
