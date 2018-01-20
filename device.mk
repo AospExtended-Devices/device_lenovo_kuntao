@@ -116,7 +116,7 @@ PRODUCT_COPY_FILES += \
 
 # Doze mode
 PRODUCT_PACKAGES += \
-    XiaomiDoze
+    LenovoDoze
 
 # DPM
 PRODUCT_BOOT_JARS += \
