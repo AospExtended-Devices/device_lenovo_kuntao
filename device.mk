@@ -127,7 +127,7 @@ PRODUCT_COPY_FILES += \
 
 # Doze mode
 PRODUCT_PACKAGES += \
-    LenovoDoze
+    XiaomiDoze
 
 # DRM
 PRODUCT_PACKAGES += \
