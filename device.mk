@@ -107,7 +107,9 @@ PRODUCT_PACKAGES += \
     copybit.msm8953 \
     liboverlay \
     libgenlock \
-    memtrack.msm8953
+    memtrack.msm8953 \
+    libqdMetaData \
+    libqdMetaData.system
 
 # Display Calibration
 PRODUCT_PACKAGES += \
