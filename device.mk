@@ -160,7 +160,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
-
 # GNSS HAL
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl
@@ -316,7 +315,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.0-impl \
     libcnefeatureconfig \
     librmnetctl \
-    libxml2
+    libxml2 \
+    telephony-ext
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
@@ -331,7 +331,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensor
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-impl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
