@@ -56,7 +56,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audiod \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
@@ -82,7 +81,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbt-vendor \
     android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service 
+    android.hardware.bluetooth@1.0-service
 
 # Charger
 PRODUCT_PACKAGES += \
