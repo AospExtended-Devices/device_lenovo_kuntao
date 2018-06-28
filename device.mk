@@ -284,6 +284,17 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     netutils-wrapper-1.0
 
+# Camera-face detection
+PRODUCT_PACKAGES += \
+    org.codeaurora.camera \
+    org.codeaurora.camera.xml
+
+PRODUCT_BOOT_JARS += \
+    org.codeaurora.camera
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.facedetect=1
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service-qti
