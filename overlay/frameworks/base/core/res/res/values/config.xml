@@ -328,6 +328,9 @@
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_enableSmartPixels">true</bool>
 
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
      <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
      <bool name="config_multiColorBatteryLed">true</bool>
 
@@ -335,6 +338,7 @@
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
     <bool name="config_proximityCheckOnWake">true</bool>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+    <bool name="config_proximityCheckOnFingerprintWake">true</bool>
     <integer name="config_proximityCheckTimeout">100</integer>
 
      <!-- Doze: should the TYPE_PICK_UP_GESTURE sensor be used as a pulse signal. -->
