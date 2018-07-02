@@ -284,7 +284,11 @@ PRODUCT_PACKAGES += \
 
 # Camera-face detection
 PRODUCT_PACKAGES += \
-    com.qualcomm.qti.camera
+    org.codeaurora.camera \
+    org.codeaurora.camera.xml
+
+PRODUCT_BOOT_JARS += \
+    org.codeaurora.camera
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.facedetect=1
