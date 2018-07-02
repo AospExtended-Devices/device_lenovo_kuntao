@@ -289,6 +289,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.facedetect=1
 
+# QPerformance
+PRODUCT_PACKAGES += \
+    QPerformance
+
+PRODUCT_BOOT_JARS += \
+    QPerformance
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service-qti
