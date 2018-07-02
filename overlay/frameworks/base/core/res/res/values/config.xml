@@ -263,6 +263,21 @@
     <!-- Is the device capable of hot swapping an UICC Card -->
     <bool name="config_hotswapCapable">true</bool>
 
+    <!-- Whether cpu boost is enabled for AppLaunch -->
+    <bool name="config_enableCpuBoostForAppLaunch">true</bool>
+
+    <!-- Whether cpu boost is enabled for animation. -->
+    <bool name="config_enablePerfBoostForAnimation">true</bool>
+
+    <!-- Whether cpu boost is enabled for pre-fling. -->
+    <bool name="config_enableCpuBoostForPreFling">true</bool>
+
+   <!-- Whether cpu boost is enabled for overscroller fling. -->
+    <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
+
+    <!-- Whether cpu boost is enabled for horizontal scroll. -->
+    <bool name="config_enableCpuBoostForScroller">true</bool>
+
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
           May be less than the minimum allowed brightness setting
           that can be set by the user. -->
