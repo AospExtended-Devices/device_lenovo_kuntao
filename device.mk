@@ -208,7 +208,8 @@ PRODUCT_PACKAGES += \
 
 # IPA Manager
 PRODUCT_PACKAGES += \
-    ipacm
+    ipacm \
+    IPACM_cfg.xml
 
 # IRQ balance
  PRODUCT_COPY_FILES += \
