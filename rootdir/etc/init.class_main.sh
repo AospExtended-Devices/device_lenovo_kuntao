@@ -41,6 +41,7 @@ esac
 case "$baseband" in
     "msm" | "unknown")
     start ipacm-diag
+    start ipacm
 
     multisim=`getprop persist.radio.multisim.config`
 
