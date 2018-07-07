@@ -88,7 +88,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    SnapdragonCamera \
+    Snap \
     camera.msm8953 \
     libmm-qcamera \
     libshim_camera \
