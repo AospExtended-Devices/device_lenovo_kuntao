@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -247,6 +247,66 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
-ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS)
+RFS_MSM_SLPI_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/slpi/
+$(RFS_MSM_SLPI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating RFS MSM SLPI folder structure: $@"
+	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly/vendor
+	$(hide) ln -sf /data/vendor/tombstones/rfs/modem $@/ramdumps
+	$(hide) ln -sf /persist/rfs/msm/slpi $@/readwrite
+	$(hide) ln -sf /persist/rfs/shared $@/shared
+	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
+	$(hide) ln -sf /firmware $@/readonly/firmware
+	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
+
+RFS_APQ_GNSS_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/apq/gnss/
+$(RFS_APQ_GNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating RFS APQ GNSS folder structure: $@"
+	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly/vendor
+	$(hide) ln -sf /data/vendor/tombstones/rfs/modem $@/ramdumps
+	$(hide) ln -sf /persist/rfs/apq/gnss $@/readwrite
+	$(hide) ln -sf /persist/rfs/shared $@/shared
+	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
+	$(hide) ln -sf /firmware $@/readonly/firmware
+	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
+
+RFS_MDM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/mdm/adsp/
+$(RFS_MDM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating RFS MDM ADSP folder structure: $@"
+	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly/vendor
+	$(hide) ln -sf /data/vendor/tombstones/rfs/modem $@/ramdumps
+	$(hide) ln -sf /persist/rfs/mdm/adsp $@/readwrite
+	$(hide) ln -sf /persist/rfs/shared $@/shared
+	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
+	$(hide) ln -sf /firmware $@/readonly/firmware
+	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
+
+RFS_MDM_MPSS_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/mdm/mpss/
+$(RFS_MDM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating RFS MDM MPSS folder structure: $@"
+	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly/vendor
+	$(hide) ln -sf /data/vendor/tombstones/rfs/modem $@/ramdumps
+	$(hide) ln -sf /persist/rfs/mdm/mpss $@/readwrite
+	$(hide) ln -sf /persist/rfs/shared $@/shared
+	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
+	$(hide) ln -sf /firmware $@/readonly/firmware
+	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
+
+RFS_MDM_SPARROW_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/mdm/sparrow/
+$(RFS_MDM_SPARROW_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating RFS MDM SPARROW folder structure: $@"
+	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly/vendor
+	$(hide) ln -sf /data/vendor/tombstones/rfs/modem $@/ramdumps
+	$(hide) ln -sf /persist/rfs/mdm/sparrow $@/readwrite
+	$(hide) ln -sf /persist/rfs/shared $@/shared
+	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
+	$(hide) ln -sf /firmware $@/readonly/firmware
+	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
+
+ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS) $(RFS_APQ_GNSS_SYMLINKS) $(RFS_MDM_ADSP_SYMLINKS) $(RFS_MDM_MPSS_SYMLINKS) $(RFS_MDM_SPARROW_SYMLINKS)
 
 endif
