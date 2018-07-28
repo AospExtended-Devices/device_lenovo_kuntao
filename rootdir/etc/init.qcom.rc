@@ -937,6 +937,13 @@ on post-fs
 # msm specific files that need to be created on /data
 on post-fs-data
 
+    mkdir /data/vendor/tombstones/rfs 0771 system system
+    mkdir /data/vendor/tombstones/rfs/modem 0771 system system
+    mkdir /data/vendor/tombstones/rfs/lpass 0771 system system
+    mkdir /data/vendor/tombstones/rfs/wcnss 0771 system system
+    mkdir /data/vendor/tombstones/rfs/slpi 0771 system system
+    mkdir /data/vendor/tombstones/rfs/tn 0771 system system
+
     mkdir /data/vendor/misc 01771 system system
 
     # Create directory used by display clients
