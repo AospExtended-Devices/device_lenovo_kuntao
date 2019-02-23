@@ -1,0 +1,16 @@
+[
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_kernel_lenovo_msm8953",
+    "target_path": "kernel/lenovo/msm8953",
+    "branch": "lineage-16.0",
+    "clone-depth": "1"
+  },
+  {
+    "remote": "github",
+    "repository": "TheMuppets/proprietary_vendor_lenovo",
+    "target_path": "vendor/lenovo",
+    "branch": "lineage-16.0",
+    "clone-depth": "1"
+  }
+]
