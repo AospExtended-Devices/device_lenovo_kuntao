@@ -48,3 +48,12 @@ BUILD_FINGERPRINT := Lenovo/kuntao_row/P2a42:7.0/NRD90N/P2a42_S251_171107_ROW:us
 TARGET_USE_JELLY := true
 
 EXTENDED_BUILD_TYPE := OFFICIAL
+
+# Set this flag in build script
+ifeq ($(CURRENT_BUILD_TYPE), gapps)
+# Use Gapps
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+endif
